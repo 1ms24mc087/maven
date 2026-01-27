@@ -1,5 +1,9 @@
 pipeline {
 	agent any
+
+	triggers{
+		cron('* * * * *')
+	}
 	
 	environment {
 		DOCKERHUB_CRED=credentials('dockerhub')
